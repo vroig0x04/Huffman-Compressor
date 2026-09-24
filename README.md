@@ -1,14 +1,91 @@
-# Huffman-Compressor
+# Huffman Compressor
 
-Copyright (c) 2026 Vicent Roig. All rights reserved.
+This repository contains a Java desktop application that implements Huffman coding for file compression and decompression. The project is a Swing-based utility that calculates byte frequencies, builds a Huffman tree, generates prefix codes, then writes and reads a compressed representation of the file.
 
-WARNING: This software is the proprietary property of Vicent Roig.
-Unauthorized copying, modification, or distribution of this file, via any 
-medium, is strictly prohibited. Proprietary and confidential.
+The implementation is intentionally simple and direct: it keeps the Java classes in the default package, so they can be compiled directly from the repository root without requiring a custom package structure.
 
-Herramienta de compresión de archivos basada puramente en el algoritmo de Huffman y la teoría de la información de Claude Shannon.
-Funciona para cualquier tipo de extensión de archivo. El formato de salida es el siguiente: <nombre_archivo>_dec.<ext_original>. 
-Asimismo, permite obtener toda la información relacionada con la entropía, tasa de codificación, longitud media de las palabras y el tiempo requerido, así
-como el árbol de Huffman tras la codificación. 
+## Project purpose
 
-En un futuro se pretende evolucionar el compresor complementándolo con el algoritmo de Lempel-Ziv, típico en los archivos comprimidos con extensión .zip. 
+The application is focused on demonstrating the Huffman algorithm and information-theory metrics. In the current codebase, the main features are:
+
+- File compression using Huffman coding
+- File decompression from the internal compressed format
+- Calculation of symbol frequencies and code assignments
+- Display of Huffman tree information in the GUI
+- Metrics such as entropy, average code length, efficiency, and elapsed time
+- A Swing interface for selecting files and operating on them interactively
+
+## Repository contents
+
+At the root of the project you will find the Java sources and the ready-to-run executables:
+
+- `Huffman.java` — application entry point
+- `Vista.java` — Swing interface and user actions
+- `Controlador.java` — controller that coordinates the model and the data structures
+- `Modelo.java` — compression and decompression logic, code generation, and statistics
+- `Estructura.java` — tree structure and readers/writers used by the algorithm
+- `BinaryHeap.java` — priority queue used in the Huffman construction
+- `Simbolo.java` — symbol representation used by the GUI
+- `ResultadoCompresion.java` — result model for compression statistics
+- `ProgressCallback.java` — progress callback interface
+- `WinHuff_jar.jar` — Java executable package
+- `WinHuff_x86_x64.exe` — Windows executable
+- `quijote.txt`, `quijote.huff`, `quijote_dec.txt` — sample files for testing and demonstration
+
+## How the application works
+
+The flow implemented in the code is:
+
+1. Select a file from the user interface.
+2. Count the frequency of each byte value.
+3. Build a Huffman tree using the available priority queue structure.
+4. Generate prefix codes for each symbol.
+5. Write the compressed file together with the metadata required to reconstruct it.
+6. Read the compressed file back and recover the original bytes and extension.
+7. Show the resulting statistics in the interface.
+
+The current implementation calculates and exposes:
+
+- Entropy
+- Average code length
+- Relative efficiency
+- Compression time
+- Huffman tree visualization
+
+## Running from source
+
+Because the classes are in the default package, compile the project from the repository root:
+
+```bash
+javac *.java
+java Huffman
+```
+
+This launches the GUI window where you can choose a file and compress or decompress it.
+
+## Ready-to-use executables
+
+The repository already includes user-facing executables at the project root so they can be used directly without recompiling:
+
+- `WinHuff_jar.jar`
+- `WinHuff_x86_x64.exe`
+
+These files are intended as the distribution artifacts for users who want to run the application without building it from source.
+
+## Notes about the project structure
+
+The Java sources are currently located at the repository root so the project remains compatible with the default-package build used by the current code. This is a practical choice for this repository and keeps the application simple to compile. If the project is later refactored into a package-based layout, it can be reorganized under a `src/` directory without changing the underlying algorithm.
+
+## License
+
+The repository description indicates that the project is proprietary and the code is distributed under a copyright notice included in the original README. Please respect the original licensing and usage terms included in the project files before redistributing or modifying the source.
+
+## Example files
+
+The repository includes sample files that can be used to test the compressor and observe its output:
+
+- `quijote.txt` — original sample text
+- `quijote.huff` — a compressed sample generated by the application
+- `quijote_dec.txt` — decompressed result for comparison
+
+This project is best understood as a compact educational and demonstrative Huffman coding implementation rather than a general-purpose production compression library.
