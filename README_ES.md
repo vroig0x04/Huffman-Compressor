@@ -6,8 +6,8 @@ La implementación es directa y sencilla: las clases Java se mantienen en el paq
 
 Demo del compresor; Probabilidades y árbol.
 
-<img width="609" height="429" alt="Captura de pantalla 2026-05-11 201858" src="https://github.com/user-attachments/assets/606a670a-58c6-4746-aeba-7119e850f123" />
-<img width="608" height="430" alt="Captura de pantalla 2026-05-11 201831" src="https://github.com/user-attachments/assets/0fcbfb46-3b26-474b-8bde-7f313d91ba42" />
+<img width="480" height="420" alt="Tree" src="https://github.com/user-attachments/assets/606a670a-58c6-4746-aeba-7119e850f123" /> <img width="480" height="420" alt="Information" src="https://github.com/user-attachments/assets/0fcbfb46-3b26-474b-8bde-7f313d91ba42" />
+
 
 
 ## Propósito del proyecto
