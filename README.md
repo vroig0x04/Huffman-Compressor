@@ -6,6 +6,11 @@ This repository contains a Java desktop application that implements Huffman codi
 
 The implementation is intentionally simple and direct: it keeps the Java classes in the default package, so they can be compiled directly from the repository root without requiring a custom package structure.
 
+Compressor demo; Tree and Compression information.
+
+<img width="500" height="420" alt="Tree" src="https://github.com/user-attachments/assets/606a670a-58c6-4746-aeba-7119e850f123" /> <img width="500" height="420" alt="Captura de pantalla 2026-05-11 202347" src="https://github.com/user-attachments/assets/d950451a-2192-4d59-8ee6-8b8d4bffb72a" />
+
+
 ## Project purpose
 
 The application is focused on demonstrating the Huffman algorithm and information-theory metrics. In the current codebase, the main features are:
