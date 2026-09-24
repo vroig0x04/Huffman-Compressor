@@ -1,6 +1,8 @@
 # Huffman Compressor
 
-This repository contains a Java desktop application that implements Huffman coding for file compression and decompression. The project is a Swing-based utility that calculates byte frequencies, builds a Huffman tree, generates prefix codes, then writes and reads a compressed representation of the file.
+Language: [English](README.md) | [Español](README_ES.md)
+
+This repository contains a Java desktop application that implements Huffman coding for file compression and decompression. The project is a Swing-based utility that calculates byte frequencies, builds a Huffman tree, and exposes compression statistics in a graphical interface.
 
 The implementation is intentionally simple and direct: it keeps the Java classes in the default package, so they can be compiled directly from the repository root without requiring a custom package structure.
 
@@ -74,11 +76,11 @@ These files are intended as the distribution artifacts for users who want to run
 
 ## Notes about the project structure
 
-The Java sources are currently located at the repository root so the project remains compatible with the default-package build used by the current code. This is a practical choice for this repository and keeps the application simple to compile. If the project is later refactored into a package-based layout, it can be reorganized under a `src/` directory without changing the underlying algorithm.
+The Java sources are currently located at the repository root so the project remains compatible with the default-package build used by the current code. This is a practical choice for this repository and keeps the project easy to run and study.
 
 ## License
 
-The repository description indicates that the project is proprietary and the code is distributed under a copyright notice included in the original README. Please respect the original licensing and usage terms included in the project files before redistributing or modifying the source.
+The repository description indicates that the project is proprietary and the code is distributed under a copyright notice included in the original README. Please respect the original licensing and terms of use before reusing the code.
 
 ## Example files
 
