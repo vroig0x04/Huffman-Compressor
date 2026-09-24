@@ -10,7 +10,6 @@ Demo del compresor; Probabilidades y árbol.
 
 
 
-
 ## Propósito del proyecto
 
 La aplicación está enfocada a demostrar el algoritmo de Huffman y algunas métricas de teoría de la información. En el código actual, las funcionalidades principales son:
